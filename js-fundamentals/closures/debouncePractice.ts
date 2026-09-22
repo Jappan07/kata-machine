@@ -2,10 +2,10 @@ function debounce<TArgs extends unknown[], TResult>(callback: (...args: TArgs) =
     let timer: ReturnType<typeof setTimeout> | undefined;
 
     const debounced = (...args: TArgs) => {
+
         if (timer) {
             clearTimeout(timer)
         }
-
         timer = setTimeout(() => {
             callback(...args)
         }, timeout);
@@ -15,6 +15,7 @@ function debounce<TArgs extends unknown[], TResult>(callback: (...args: TArgs) =
         timer = undefined
         clearTimeout(timer)
     }
+
 
     return debounced
 }
