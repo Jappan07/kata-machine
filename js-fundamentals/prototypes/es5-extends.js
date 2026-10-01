@@ -14,6 +14,8 @@ function myExtends(Supertype, Subtype){
 
     // static methods
     Object.setPrototypeOf(ExtendedType,Supertype)
+
+    return ExtendedType
 }
 
 
